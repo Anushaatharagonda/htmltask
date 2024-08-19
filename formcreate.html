@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tags</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Form creation</h1>
+    <form>
+        Enter your Name <br>
+       
+<br>
+First name:
+<br>
+<input type="text" name="First name">
+
+<br>
+Last name:
+<br>
+<input type="text" name="First name">
+<h3>Textarea</h3>
+Enter your Job Discription
+<textarea  cols="30" rows="10"></textarea>
+<br>
+<label for="fname"> Firstname</label><br>
+<input type="text" name="Firstname"><br>
+<label for="lname"> lastname</label><br>
+<input type="text" name="lastname"><br>
+<h3>Password</h3>
+<label for="password">password</label>
+<input type="text" name="password">
+<br>
+<h3>Fieldset</h3>
+<fieldset>
+    <legend>Personal Information</legend>
+    <label for="fname">Firstname</label>
+   <input type="text" name="Firstname"><br></br>
+   <label for="lname">lastname</label>
+   <input type="text" name="Lastname"><br></br>
+   <label for="Email">Email:</label>
+   <input type="email" id="email" name="email"><br></br>
+<label for="DOB">Birthday</label>
+<input type="date" id="Birthday" name="Birthday"><br></br>
+<input type="submit" name="submit">
+</fieldset>
+<h3>Select --The select element is used to create a drop-down list</h3>
+
+Enter your country
+<select name="country" id="country">
+    <option value="Amercia">Amercia</option>
+    <option value="Amercia">UK</option>
+    <option value="Amercia">India</option>
+    <option value="Amercia">china</option>
+    <option value="Amercia">England</option>
+    <option value="Amercia">Indonasia</option>
+</select>
+<h3>The optgroup element</h3>
+
+<p>The optgroup tag is used to group related options in a drop-down list:</p>
+<label for="cars">Choose a car:</label>
+  <select name="cars" id="cars">
+    <optgroup label="Swedish Cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+    </optgroup>
+    <optgroup label="German Cars">
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </optgroup>
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">
+  <h3>Option--A dropdown list must have at least one option element.</h3>
+  <option value="state">Enter your state </option>
+  <select name="state" id="state">
+    <option value="Telangana">Telangana</option>
+    <option value="Telangana">Chennai</option>
+    <option value="Telangana">Gujart</option>
+    <option value="Telangana">Odisa</option>
+    <option value="Telangana">Arunachal Pradesh</option>
+    <option value="Telangana">Uttarpradesh</option>
+    <option value="Telangana">Andhrapradesh</option>
+    <option value="Telangana">Bengulore</option>
+
+     </select>
+     <h3>Radio Buttons--Radio buttons let a user select ONE of a limited number of choices.</h3>
+
+<p>Choose your favorite Web language:</p>
+
+ <input type="radio" id="html" name="fav_language" value="HTML">
+ <label for="html">HTML</label><br>
+ <input type="radio" id="css" name="fav_language" value="CSS">
+ <label for="css">CSS</label><br>
+ <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+<label for="javascript">JavaScript</label>
+<h3>Checkboxes--Checkboxes let a user select ZERO or MORE options of a limited number of choices.</h3>
+<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+<label for="vehicle1"> I have a bike</label><br>
+<input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+<label for="vehicle2"> I have a car</label><br>
+<input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+<label for="vehicle3"> I have a boat</label><br></br>
+<label for="button">submit button</label>
+<button type="button" onclick="alert('Hello world!')">click me !</button>
+    </form>
+</body>
+</html>
