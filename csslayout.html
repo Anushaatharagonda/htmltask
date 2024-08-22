@@ -3,9 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Css Layout</title>
+    <title>Food Court Layout</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.menu-categories {
+    background-color: #444;
+    padding: 10px;
+    text-align: center;
+}
+
+.menu-categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-categories ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.menu-categories ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.food-section {
+    margin: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.food-section h2 {
+    text-align: center;
+    color: #333;
+}
+
+.food-item {
+    display: inline-block;
+    width: 45%;
+    margin: 2%;
+    padding: 10px;
+    text-align: center;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.food-item img {
+    width: 20%;
+    height: auto;
+    border-radius: 8px;
+    background-repeat: no-repeat;
+}
+
+.food-item p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+ h2{
+    background-color:lightyellow
+ }
+    </style>
 </head>
 <body>
-    <h1>css layout</h1>
+    <header class="header">
+        <h1>Food Court</h1>
+    </header>
+
+    <nav class="menu-categories">
+        <ul>
+            <li><a href="#burgers">Burgers</a></li>
+            <li><a href="#pizzas">Pizzas</a></li>
+            <li><a href="#desserts">Desserts</a></li>
+            <li><a href="#drinks">Drinks</a></li>
+        </ul>
+    </nav>
+
+    <section id="burgers" class="food-section">
+        <h2>Burgers</h2>
+        <div class="food-item">
+            <img src= "/Burger.jpeg" alt="Burger">
+            <p>Delicious Beef Burger</p>
+            <p>$5.99</p>
+        </div>
+        <div class="food-item">
+            <img src="./Burger.jpeg" alt="Cheeseburger">
+            <p>Cheese Burger</p>
+            <p>$6.99</p>
+        </div>
+    </section>
+
+    <section id="pizzas" class="food-section">
+        <h2>Pizzas</h2>
+        <div class="food-item">
+            <img src="./Pizza.jpeg" alt="Pizza">
+            <p>Pepperoni Pizza</p>
+            <p>$9.99</p>
+        </div>
+        <div class="food-item">
+            <img src="./Pizza.jpeg" alt="Veg Pizza">
+            <p>Veggie Pizza</p>
+            <p>$8.99</p>
+        </div>
+    </section>
+
+    <section id="desserts" class="food-section">
+        <h2>Desserts</h2>
+        <div class="food-item">
+          Ice Cream
+            <p>Chocolate Ice Cream</p>
+            <p>$3.99</p>
+        </div>
+        <div class="food-item">
+          Cakes
+            <p>Cheesecake</p>
+            <p>$4.99</p>
+        </div>
+    </section>
+
+    <section id="drinks" class="food-section">
+        <h2>Drinks</h2>
+        <div class="food-item">
+            Coffee
+            <p>Cappuccino</p>
+            <p>$2.99</p>
+        </div>
+        <div class="food-item">
+            Juice
+            <p>Orange Juice</p>
+            <p>$2.49</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Food Court. All rights reserved.</p>
+    </footer>
 </body>
 </html>
