@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css parentFlex box examples </title>
+    <style>
+        .horizontal-container {
+            display: flex;
+            flex-direction: row; /* Horizontal layout */
+            border: 2px solid #000;
+            padding: 10px;
+            gap: 10px;
+        }
+
+        .vertical-container {
+            display: flex;
+            flex-direction: column; /* Vertical layout */
+            border: 2px solid #000;
+            padding: 10px;
+            gap: 10px;
+        }
+
+        .item {
+            background-color: lightblue;
+            padding: 20px;
+            border: 2px solid #000;
+        }
+        .wrap-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+            border: 2px solid #000;
+            padding: 10px;
+            gap: 10px;
+        }
+
+        .nowrap-container {
+            display: flex;
+            flex-wrap: nowrap; /* Prevent items from wrapping */
+            border: 2px solid #000;
+            padding: 10px;
+            gap: 10px;
+            overflow: auto; /* Add scrollbar if needed */
+        }
+
+        .itemm {
+            background-color: lightcoral;
+            padding: 20px;
+            border: 2px solid #000;
+            flex: 1 1 150px; /* Grow, shrink, and base size */
+        }
+        .flow-container{
+            display: flex;
+            flex-flow: column wrap; /* Shorthand for flex-direction and flex-wrap */
+            border: 2px solid #000;
+            gap: 10px;
+            padding: 10px;
+        }
+        .flowitem{
+            background-color: lightsalmon;
+            border: 2px solid #000;
+            padding: 20px;
+            flex: 1 1 150px; /* Grow, shrink, and base size */
+           
+        }
+        .justify-container {
+            display: flex;
+            justify-content: space-between; /* Distribute space between items */
+            border: 2px solid #000;
+            padding: 10px;
+            gap: 10px;
+        }
+
+        .justifyitem {
+            background-color: lightseagreen;
+            padding: 20px;
+            border: 2px solid #000;
+        }
+        .align-container {
+            display: flex;
+            align-items: flex-end; /* Align items at the end of the cross axis */
+            height: 200px; /* Set height for demonstration */
+            border: 2px solid #000;
+            padding: 10px;
+            gap: 10px;
+        }
+
+        .alignitem {
+            background-color: lightpink;
+            padding: 20px;
+            border: 2px solid #000;
+        }
+        .content-containe{
+            display: flex;
+           
+            align-content: center; /* Align lines of items in the center */
+            height: 300px; /* Set height for demonstration */
+            border: 2px solid #000;
+            padding: 10px;
+            gap: 10px;
+        }
+        .aligncontentitem {
+            background-color: lightsteelblue;
+            padding: 20px;
+            border: 2px solid #000;
+            flex: 1 1 120px; /* Grow, shrink, and base size */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex-direction</h1>
+    <h2>Horizontal Layout</h2>
+    <div class="horizontal-container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <h2>Vertical Layout</h2>
+    <div class="vertical-container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+    <h1>Flex Wrap</h1>
+    <h2>Wrap Container</h2>
+    <div class="wrap-container">
+        <div class="itemm">Item 1</div>
+        <div class="itemm">Item 2</div>
+        <div class="itemm">Item 3</div>
+        <div class="itemm">Item 4</div>
+        <div class="itemm">Item 5</div>
+    </div>
+
+    <h2>No Wrap Container</h2>
+    <div class="nowrap-container">
+        <div class="itemm">Item 1</div>
+        <div class="itemm">Item 2</div>
+        <div class="itemm">Item 3</div>
+        <div class="itemm">Item 4</div>
+        <div class="itemm">Item 5</div>
+    </div>
+    <h1>Flex Flow</h1>
+    <div class="flow -container">
+        <div class="flowitem">Item1</div>
+        <div class="flowitem">Item2</div>
+        <div class="flowitem">Item3</div>
+        <div class="flowitem">Item4</div>
+        <div class="flowitem">Item5</div>
+
+    </div>
+    <h1>Justify-content: Space Between</h1>
+    <div class="justify-container">
+        <div class="justifyitem">Item 1</div>
+        <div class="justifyitem">Item 2</div>
+        <div class="justifyitem">Item 3</div>
+    </div>
+    <h1>Align-items: Flex End</h1>
+    <div class="align-container">
+        <div class="alignitem">Item 1</div>
+        <div class="alignitem">Item 2</div>
+        <div class="alignitem">Item 3</div>
+    </div>
+    <h2>Align-content: Center</h2>
+    <div class="content-container">
+        <div class="aligncontentitem">Item 1</div>
+        <div class="aligncontentitem">Item 2</div>
+        <div class="aligncontentitem">Item 3</div>
+        <div class="aligncontentitem">Item 4</div>
+        <div class="aligncontentitem">Item 5</div>
+        <div class="aligncontentitem">Item 6</div>
+    </div>
+</body>
+</html>
