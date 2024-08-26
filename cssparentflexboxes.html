@@ -100,11 +100,83 @@
             gap: 10px;
         }
         .aligncontentitem {
-            background-color: rgb(6, 28, 56);
+            background-color: rgb(218, 222, 227);
             padding: 20px;
             border: 2px solid #000;
             flex: 1 1 120px; /* Grow, shrink, and base size */
             text-align: center;
+        }
+        .order{
+            display: flex;
+           align-items: stretch;
+           background-color: chocolate;
+        }
+        .order>div{
+            background-color: pink;
+            width: 100px;
+            padding: 10px;
+            line-height:75px ;
+            text-align: center;
+            font-size:30px ;
+            margin: 20px;
+        }
+        .grow{
+            display: flex;
+            align-items: stretch;
+            background-color: coral;
+            
+        }
+        .grow>div{
+            background-color: pink;
+            width: 100px;
+            padding: 10px;
+            line-height:75px ;
+            text-align: center;
+            font-size:30px ;
+            margin: 20px;
+        }
+        .shrink{
+          display: flex;
+          background-color: coral;
+          align-items: stretch;
+        }
+        .shrink>div{
+            background-color: pink;
+            width: 100px;
+            padding: 10px;
+            line-height:75px ;
+            text-align: center;
+            font-size:30px ;
+            margin: 20px;
+        }
+        .basis{
+          display: flex;
+          background-color: coral;
+          align-items: stretch;
+        }
+        .basis>div{
+            background-color: pink;
+            width: 100px;
+            padding: 10px;
+            line-height:75px ;
+            text-align: center;
+            font-size:30px ;
+            margin: 20px;
+        }
+        .self{
+          display: flex;
+          background-color: coral;
+          align-items: stretch;
+          height: 300px;
+        }
+        .self>div{
+            background-color: pink;
+            width: 100px;
+            padding: 10px;
+            line-height:75px ;
+            text-align: center;
+            font-size:30px ;
+            margin: 20px;
         }
     </style>
 </head>
@@ -170,6 +242,53 @@
         <div class="aligncontentitem">Item 4</div>
         <div class="aligncontentitem">Item 5</div>
         <div class="aligncontentitem">Item 6</div>
+    </div>
+    <h1>Child Elements</h1>
+    <h2>Order</h2>
+    <div class="order"> 
+        <div style="order: 2">1</div>
+        <div style="order: 6">2</div>
+        <div style="order: 4">3</div>
+        <div style="order: 1">4</div>
+        <div style="order: 3">5</div> 
+         <div style="order: 56">6</div>
+
+
+    </div>
+    <h1>Flex-grow</h1>
+    <div class="grow"> 
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div style="flex-grow: 3;">4</div>
+        <div>5</div>
+
+    </div>
+    <h1>Flex-shrink</h1>
+    <div class="shrink">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div class="Flex-shrink: 0;">6</div>
+        <div>7</div>
+    </div>
+    <h1>flex-basis</h1>
+    <div class="basis">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div style="flex-basis:300px ;">4</div>
+        <div>5</div>
+    </div>
+    <h1>Align-self</h1>
+    <div class="self">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div style="align-self:center;">4</div>
+        <div>5</div>
     </div>
 </body>
 </html>
