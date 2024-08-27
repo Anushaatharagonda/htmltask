@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+        div{
+            width: 120px;
+            height:200px ;
+            background-color: brown;
+            border: 2px solid black;
+            transition: 3s;
+            transition-delay: 2s;
+        }
+        div:hover{
+            width: 500px;
+            height: 300px;
+        }
+        #linear{
+            transition-timing-function: linear;
+
+
+        }
+        #ease-in{
+            transition-timing-function:ease-in;
+        }
+        #ease-out{
+            transition-timing-function:ease-out;
+        }
+        #ease-in-out{
+            transition-timing-function:ease-in-out;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Transitions</h1>
+    <div id="transition">
+
+    </div>
+    <h1>Linear</h1>
+    <div id="linear">
+        linear
+
+    </div>
+    <h1>ease-in</h1>
+    <div id="ease-in">
+        ease-in
+
+    </div>
+    <h1>ease-out</h1>
+    <div id="ease-out">
+        ease-out
+
+    </div>
+    <h1>ease-in-out</h1>
+    <div id="ease-in-out">
+        ease-in-out
+
+    </div>
+</body>
+</html>
