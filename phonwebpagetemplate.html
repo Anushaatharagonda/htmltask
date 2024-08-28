@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Store</title>
+    <style>
+        /* General Reset */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f0f2f5;
+           
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between; /* Space between logo and search bar */
+            align-items: center;
+            background: linear-gradient(90deg, #ff8a00, #da1d1d); /* Gradient background */
+            color: #fff;
+            padding: 1rem 2rem; /* Padding around the header content */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            max-width: 90px; /* Adjust as needed */
+            height: auto;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            max-width: 500px;
+            width: 100%;
+            margin-left: auto; /* Push search bar to the right */
+        }
+
+        .search-bar input[type="text"] {
+            width: calc(100% - 90px); /* Adjust to fit within the search bar container */
+            padding: 0.7rem;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            outline: none;
+            background-color: #fff;
+            color: #333;
+        }
+
+        .search-bar button {
+            padding: 0.7rem;
+            border: none;
+            background-color: #ff5722; /* Vibrant orange */
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #e64a19;
+        }
+
+        .user-links {
+            text-align: center;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #ff5722, #ff8a00); /* Gradient background */
+            padding: 0.5rem 0;
+        }
+
+        .user-links a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .user-links a:hover {
+            text-decoration: underline;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            background-color: #007BFF; /* Bright blue */
+            padding: 0.5rem 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            
+            background: linear-gradient(135deg, rgba(233, 30, 99, 0.6), rgba(156, 39, 176, 0.6)), 
+                        url('./images4.jpeg') no-repeat center center/cover; /* Gradient overlay + background image */
+           color: #fff;
+            text-align: center;
+            padding:  100px 1rem;
+           
+            width: 100vw; /* Full viewport width */
+          /*  height: 40vh; /* 60% of viewport height */
+            background-size: cover; /* Ensures the background image covers the entire section */
+            background-position: center; /* Centers the background image */
+           
+          
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .products {
+            padding: 3rem 1rem;
+            background-color: #ffffff;
+        }
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+            width: calc(33.333% - 2rem);
+            background-color: #fafafa;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .product img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .product h2 {
+            font-size: 1.5rem;
+            margin: 0.5rem 0;
+        }
+
+        .product p {
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+            color: #ff5722; /* Vibrant orange */
+        }
+
+        .product button {
+            background-color: #ff5722; /* Vibrant orange */
+            border: none;
+            color: #fff;
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .product button:hover {
+            background-color: #e64a19;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+        }
+        @media (max-width: 768px) {
+            .search-bar {
+                max-width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .product {
+                width: calc(50% - 2rem);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .search-bar {
+                flex-direction: column;
+            }
+
+            .search-bar input[type="text"] {
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+
+            .search-bar button {
+                width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .product {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+    <header>
+        
+        <div class="logo">
+            <img src="./phonelogo.jpeg" alt="Phone Store Logo">
+
+        </div>
+        <div class="logo-text">
+            <h1>Phones</h1>
+            <h2>Store</h2>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for phones...">
+            <button>Search</button>
+        </div>
+    </header>
+
+    <div class="user-links">
+        <a href="#">Register</a>
+        <a href="#">Login</a>
+        <a href="#">Delivery</a>
+        <a href="#">Checkout</a>
+        <a href="#">My Account</a>
+        <a href="#">Shopping Cart </a>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>Find Your Next Smartphone</h1>
+        <p>Browse through our collection of the latest and greatest phones on the market.</p>
+    </div>
+
+    <section class="products">
+        <div class="product-list">
+            <div class="product">
+                <img src="./phone1.jpeg" alt="Phone 1">
+                <h2>Phone Model 1</h2>
+                <p>$299.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./phone2.jpeg" alt="Phone 2">
+                <h2>Phone Model 2</h2>
+                <p>$399.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./phone3.jpeg" alt="Phone 3">
+                <h2>Phone Model 3</h2>
+                <p>$499.99</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Phone Store. All rights reserved.</p>
+    </footer>
+</body>
+</html>
